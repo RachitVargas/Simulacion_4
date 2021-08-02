@@ -8,7 +8,7 @@ import java.util.ArrayList;
 public class archivos {
     public void cargarDatos(ArrayList<persona> persona) throws FileNotFoundException {
 
-        Scanner fileReader = new Scanner(new File("//Users//antony.vargasulead.ac.cr//IdeaProjects//Simulacion 4//src//ArchivosDeRegistro//datos//players_15.csv"));
+        Scanner fileReader = new Scanner(new File("/Users/antony.vargasulead.ac.cr/IdeaProjects/Simulacion 4/src/ArchivosDeRegistro/datos/players_15.csv"));
 
         System.out.println("Cargando simulación...");
         while (fileReader.hasNextLine()) {

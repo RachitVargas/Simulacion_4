@@ -1,34 +1,24 @@
 package Simulacion_4;
 import java.util.ArrayList;
+
 import Simulacion_4.persona.persona;
 import Simulacion_4.gestor_archivos.archivos;
+import Simulacion_4.logica.logic;
 import java.io.*;
 
 
 public class main {
-    public static void main (String args []) throws IOException {
 
-        archivos unArchivo = new archivos();
+    public static void main (String args []) throws IOException, ClassNotFoundException {
+
         ArrayList<persona> jugador = new ArrayList<>();
+        jugador = logic.cargarArchivos();
+        logic.escribirArchivoBat(jugador);
 
-        unArchivo.cargarDatos(jugador);
+        ArrayList<persona> players = new ArrayList();
+        players = logic.leerDatosArchivoBat();
 
-        FileOutputStream f = new FileOutputStream(new File("//Users//antony.vargasulead.ac.cr//IdeaProjects//Simulacion 4//src//ArchivosDeRegistro//datos//archivo.dat"));
-        ObjectOutputStream o = new ObjectOutputStream(f);
 
-/*
 
-        jugador.forEach(x -> {
-            System.out.println(x.toString());
-            try {
-                o.writeObject(x);
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        });
-*/
-
-        o.close();
-        f.close();
     }
 }

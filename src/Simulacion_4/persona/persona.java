@@ -1,6 +1,8 @@
 package Simulacion_4.persona;
 
-public class persona {
+import java.io.Serializable;
+
+public class persona implements Serializable {
 
     private String nombre;
     private int edad;
