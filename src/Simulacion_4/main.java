@@ -2,10 +2,9 @@ package Simulacion_4;
 import java.util.ArrayList;
 
 import Simulacion_4.persona.persona;
-import Simulacion_4.gestor_archivos.archivos;
+import Simulacion_4.interfaz.ui;
 import Simulacion_4.logica.logic;
 import java.io.*;
-
 
 public class main {
 
@@ -18,7 +17,14 @@ public class main {
         ArrayList<persona> players = new ArrayList();
         players = logic.leerDatosArchivoBat();
 
+        ui anInterfaz = new ui();
 
+        int opcion = 0;
+
+        do{
+            opcion = anInterfaz.menu();
+            logic.correrConsultas(opcion, players);
+        }while(opcion != 7);
 
     }
 }

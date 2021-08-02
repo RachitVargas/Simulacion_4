@@ -10,7 +10,7 @@ public class archivos {
 
         Scanner fileReader = new Scanner(new File("/Users/antony.vargasulead.ac.cr/IdeaProjects/Simulacion 4/src/ArchivosDeRegistro/datos/players_15.csv"));
 
-        System.out.println("Cargando simulación...");
+        System.out.println("Cargando datos...");
         while (fileReader.hasNextLine()) {
             String currentLine = fileReader.nextLine();
             String datos[] = currentLine.split(";");
@@ -26,7 +26,7 @@ public class archivos {
 
             persona.add(persona1);
         }
-        System.out.println("Simulación cargada con exito");
+        System.out.println("Datos cargados con exito");
         fileReader.close();
     }
 }
