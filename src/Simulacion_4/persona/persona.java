@@ -12,6 +12,7 @@ public class persona implements Serializable {
     private String nacionalidad;
     private String club;
     private int numero_camiseta;
+    private int indice;
 
     public String getNombre() {
         return nombre;
@@ -77,6 +78,14 @@ public class persona implements Serializable {
         this.numero_camiseta = numero_camiseta;
     }
 
+    public int getIndice() {
+        return indice;
+    }
+
+    public void setIndice(int indice) {
+        this.indice = indice;
+    }
+
     @Override
     public String toString() {
         return "Jugador{" +
@@ -90,4 +99,5 @@ public class persona implements Serializable {
                 ", numero camiseta=" + getNumero_camiseta() + '\'' +
                 '}';
     }
+
 }
