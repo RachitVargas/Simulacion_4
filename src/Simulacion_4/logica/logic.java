@@ -145,7 +145,7 @@ public class logic {
 
         long fin = System.nanoTime();
         double tiempoTotal = (fin - inicio);
-        System.out.println("El tiempo de ejecuacion fue de: " + tiempoTotal + " milisegundos.");
+        System.out.println("El tiempo de ejecuacion fue de (sin index): " + tiempoTotal + " milisegundos.");
         System.out.println();
 
         for (int j = 0; j < jugadores_filtrados.size(); j++){
@@ -199,14 +199,20 @@ public class logic {
         long inicio = System.nanoTime();
 
         ArrayList<Integer> result = (ArrayList) hashMap.get(term);
-
+        ArrayList<persona> jugadores_filtrados = new ArrayList();
+        System.out.println();
+        System.out.println("Iniciando");
+        System.out.println();
+        persona persona1 = null;
         for (Integer consecutivo: result) {
-            persona persona1 = personas.get(consecutivo-1);
-            System.out.println(persona1);
+            persona1 = personas.get(consecutivo-1);
+            jugadores_filtrados.add(persona1);
         }
-
         long fin = System.nanoTime();
         double tiempoTotal = (fin - inicio);
         System.out.println("El tiempo de ejecuacion fue de (tecnica de index): " + tiempoTotal + " milisegundos");
+        for (int j = 0; j < jugadores_filtrados.size(); j++){
+            System.out.println(jugadores_filtrados.get(j));
+        }
     }
 }
